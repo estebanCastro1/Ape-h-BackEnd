@@ -18,4 +18,16 @@ public class StudentScheduleController {
     public ArrayList<StudentScheduleModel> obtenerStudentSchedule(){
         return studentScheduleService.obtenerSchedule();
     }
+    @GetMapping(path = "{id}")
+    public StudentScheduleModel obtenerStudentScheduleId(@PathVariable("id") String id){
+        return studentScheduleService.obtenerScheduleId(id);
+    }
+    @PostMapping(consumes="application/json")
+    public String guardarStudentSchedule(@RequestBody StudentScheduleModel studentSchedule) {
+        return this.studentScheduleService.agregarStudentSchedule(studentSchedule);
+    }
+    @PutMapping(consumes="application/json")
+    public StudentScheduleModel actualizarStudentSchedule(@RequestBody StudentScheduleModel studentSchedule) {
+        return this.studentScheduleService.actualizarStudentSchedule(studentSchedule);
+    }
 }

@@ -21,4 +21,13 @@ public class StudentScheduleService {
     public StudentScheduleModel obtenerScheduleId(String id){
         return studentScheduleRepository.studentScheduleByID(id);
     }
+    public String agregarStudentSchedule(StudentScheduleModel studentSchedule) {
+        //falta verificaciones con las dependencias (laves foraneas)
+        studentScheduleRepository.save(studentSchedule);
+        return "horario del estudiante creado correctamente";
+
+    }
+    public StudentScheduleModel actualizarStudentSchedule(StudentScheduleModel studentSchedule) {
+        return studentScheduleRepository.save(studentSchedule);
+    }
 }

@@ -21,4 +21,13 @@ public class ScheduleIngSistemService {
     public ScheduleIngSistemModel obtenerScheduleIngSistemId(String id){
         return scheduleIngSistemRepository.ScheduleIngSistemByID(id);
     }
+    public String agregarScheduleIngSistem(ScheduleIngSistemModel scheduleIngSistem) {
+        //falta verificaciones con las dependencias (laves foraneas)
+        scheduleIngSistemRepository.save(scheduleIngSistem);
+        return "horario de ingenieria creado correctamente";
+
+    }
+    public ScheduleIngSistemModel actualizarScheduleIngSistem(ScheduleIngSistemModel scheduleIngSistem) {
+        return scheduleIngSistemRepository.save(scheduleIngSistem);
+    }
 }

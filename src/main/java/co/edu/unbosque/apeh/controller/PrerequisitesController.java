@@ -18,4 +18,17 @@ public class PrerequisitesController {
     public ArrayList<PrerequisitesModel> obtenerPrerequisites(){
         return prerequisitesService.obtenerPrerequisites();
     }
+
+    @GetMapping(path = "{id}")
+    public PrerequisitesModel obtenerPrerequisitesID(@PathVariable("id") String id){
+        return prerequisitesService.obtenerPrerequisitesId(id);
+    }
+    @PostMapping(consumes="application/json")
+    public String guardarPrerequisites(@RequestBody PrerequisitesModel prerequisites) {
+        return this.prerequisitesService.agregarPrerequisites(prerequisites);
+    }
+    @PutMapping(consumes="application/json")
+    public PrerequisitesModel actualizarPrerequisites(@RequestBody PrerequisitesModel prerequisites) {
+        return this.prerequisitesService.actualizarPrerequisites(prerequisites);
+    }
 }

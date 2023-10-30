@@ -17,4 +17,17 @@ public class PensumController {
     public ArrayList<PensumModel> obtenerPensum(){
         return pensumService.obtenerPensum();
     }
+
+    @GetMapping(path = "{id}")
+    public PensumModel obtenerPensumId(@PathVariable("id") String id){
+        return pensumService.obtenerPensumId(id);
+    }
+    @PostMapping(consumes="application/json")
+    public String guardarPensum(@RequestBody PensumModel pensum) {
+        return this.pensumService.agregarPensumn(pensum);
+    }
+    @PutMapping(consumes="application/json")
+    public PensumModel actualizarPensum(@RequestBody PensumModel pensum) {
+        return this.pensumService.actualizarPensum(pensum);
+    }
 }

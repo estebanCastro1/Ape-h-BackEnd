@@ -20,4 +20,14 @@ public class UserService {
     public UserModel obtenerUserCc(String cc){
         return userRepository.userByID(cc);
     }
+    public String agregarUser(UserModel user) {
+        //falta verificaciones con las dependencias (laves foraneas)
+        userRepository.save(user);
+        return "ususario creado correctamente";
+
+    }
+    public UserModel actualizarUser(UserModel user) {
+
+        return userRepository.save(user);
+    }
 }

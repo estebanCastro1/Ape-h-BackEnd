@@ -16,7 +16,18 @@ public class ElectiveService {
         return (ArrayList<ElectiveModel>)electiveRepository.findAll();
     }
 
-    public ElectiveModel obtenerElectiveId(String id){
+    public ElectiveModel obtenerElectiveId(Long id){
         return electiveRepository.electiveByID(id);
+    }
+
+    public String agregarElective(ElectiveModel elective) {
+        //falta verificaciones con las dependencias (laves foraneas)
+        electiveRepository.save(elective);
+        return "electiva creada correctamente";
+
+    }
+
+    public ElectiveModel actualizarElective(ElectiveModel elective) {
+        return electiveRepository.save(elective);
     }
 }

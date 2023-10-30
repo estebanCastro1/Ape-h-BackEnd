@@ -18,4 +18,17 @@ public class ProfessorController {
     public ArrayList<ProfessorModel> obtenerProfessor(){
         return professorService.obtenerProfessor();
     }
+
+    @GetMapping(path = "{id}")
+    public ProfessorModel obtenerProfessorId(@PathVariable("id") String id){
+        return professorService.obtenerProfessorId(id);
+    }
+    @PostMapping(consumes="application/json")
+    public String guardarProfessor(@RequestBody ProfessorModel professor) {
+        return this.professorService.agregarProfessor(professor);
+    }
+    @PutMapping(consumes="application/json")
+    public ProfessorModel actualizarProfessor(@RequestBody ProfessorModel professor) {
+        return this.professorService.actualizarProfessor(professor);
+    }
 }

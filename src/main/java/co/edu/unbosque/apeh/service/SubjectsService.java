@@ -20,4 +20,14 @@ public class SubjectsService {
     public SubjectsModel obtenerSubjectsId(String id){
         return subjectsRepository.subjectsByID(id);
     }
+    public String agregarSubjects(SubjectsModel subjects) {
+        //falta verificaciones con las dependencias (laves foraneas)
+        subjectsRepository.save(subjects);
+        return "materia creado correctamente";
+
+    }
+    public SubjectsModel actualizarSubjects(SubjectsModel subjects) {
+
+        return subjectsRepository.save(subjects);
+    }
 }

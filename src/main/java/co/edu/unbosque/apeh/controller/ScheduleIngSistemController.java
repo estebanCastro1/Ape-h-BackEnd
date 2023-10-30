@@ -18,4 +18,16 @@ public class ScheduleIngSistemController {
     public ArrayList<ScheduleIngSistemModel> obtenerScheduleIngSistem(){
         return scheduleIngSistemService.obtenerscheduleIngeSistem();
     }
+    @GetMapping(path = "{id}")
+    public ScheduleIngSistemModel obtenerScheduleIngSistemId(@PathVariable("id") String id){
+        return scheduleIngSistemService.obtenerScheduleIngSistemId(id);
+    }
+    @PostMapping(consumes="application/json")
+    public String guardarScheduleIngSistem(@RequestBody ScheduleIngSistemModel scheduleIngSistem) {
+        return this.scheduleIngSistemService.agregarScheduleIngSistem(scheduleIngSistem);
+    }
+    @PutMapping(consumes="application/json")
+    public ScheduleIngSistemModel actualizarScheduleIngSistem(@RequestBody ScheduleIngSistemModel scheduleIngSistem) {
+        return this.scheduleIngSistemService.actualizarScheduleIngSistem(scheduleIngSistem);
+    }
 }

@@ -17,5 +17,16 @@ public class ElectiveController {
     public ArrayList<ElectiveModel> obtenerElective(){
         return electiveService.obtenerElective();
     }
-
+    @GetMapping(path = "{id}")
+    public ElectiveModel obtenerElectiveId(@PathVariable("id") Long id){
+        return electiveService.obtenerElectiveId(id);
+    }
+    @PostMapping(consumes="application/json")
+    public String guardarElective(@RequestBody ElectiveModel elective) {
+        return this.electiveService.agregarElective(elective);
+    }
+    @PutMapping()
+    public ElectiveModel actualizarElective(@RequestBody ElectiveModel elective) {
+        return this.electiveService.actualizarElective(elective);
+    }
 }

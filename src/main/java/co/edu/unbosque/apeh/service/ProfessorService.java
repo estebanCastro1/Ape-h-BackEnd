@@ -20,4 +20,13 @@ public class ProfessorService {
     public ProfessorModel obtenerProfessorId(String id){
         return professorRepository.professorByID(id);
     }
+    public String agregarProfessor(ProfessorModel professor) {
+        //falta verificaciones con las dependencias (laves foraneas)
+        professorRepository.save(professor);
+        return "profesor creado correctamente";
+
+    }
+    public ProfessorModel actualizarProfessor(ProfessorModel professor) {
+        return professorRepository.save(professor);
+    }
 }

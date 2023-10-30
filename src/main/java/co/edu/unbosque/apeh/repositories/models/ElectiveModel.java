@@ -55,4 +55,5 @@ public class ElectiveModel {
     public void setProfessor(ProfessorModel professor) {
         this.professor = professor;
     }
+
 }

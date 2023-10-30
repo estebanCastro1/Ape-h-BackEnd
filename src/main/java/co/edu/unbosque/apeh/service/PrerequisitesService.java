@@ -21,4 +21,13 @@ public class PrerequisitesService {
     public PrerequisitesModel obtenerPrerequisitesId(String id){
         return prerequisitesRepository.preriquisitesByID(id);
     }
+    public String agregarPrerequisites(PrerequisitesModel prerequisites) {
+        //falta verificaciones con las dependencias (laves foraneas)
+        prerequisitesRepository.save(prerequisites);
+        return "prerequisitos creados correctamente";
+
+    }
+    public PrerequisitesModel actualizarPrerequisites(PrerequisitesModel prerequisites) {
+        return prerequisitesRepository.save(prerequisites);
+    }
 }

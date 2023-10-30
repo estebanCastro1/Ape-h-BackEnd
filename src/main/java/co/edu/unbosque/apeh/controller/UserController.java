@@ -19,4 +19,16 @@ public class UserController {
     public ArrayList<UserModel> obtenerUser(){
         return userService.obtenerUser();
     }
+    @GetMapping(path = "{id}")
+    public UserModel obtenerUserId(@PathVariable("id") String id){
+        return userService.obtenerUserCc(id);
+    }
+    @PostMapping(consumes="application/json")
+    public String guardarUser(@RequestBody UserModel user) {
+        return this.userService.agregarUser(user);
+    }
+    @PutMapping(consumes="application/json")
+    public UserModel actualizarUser(@RequestBody UserModel user) {
+        return this.userService.actualizarUser(user);
+    }
 }

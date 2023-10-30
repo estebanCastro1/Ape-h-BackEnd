@@ -20,5 +20,14 @@ public class PensumService {
     public PensumModel obtenerPensumId(String id){
         return pensumRepository.pensumByID(id);
     }
+    public String agregarPensumn(PensumModel pensum) {
+        //falta verificaciones con las dependencias (laves foraneas)
+        pensumRepository.save(pensum);
+        return "pensum creado correctamente";
+
+    }
+    public PensumModel actualizarPensum(PensumModel pensum) {
+        return pensumRepository.save(pensum);
+    }
 
 }
