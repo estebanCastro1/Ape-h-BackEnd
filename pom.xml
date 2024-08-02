@@ -15,7 +15,7 @@
 	<name>apeh</name>
 	<description>Proyecto de grado, asistente de elaboracion de horarios para estudiantes de ingenieria de sistemas de la universidad el bosque</description>
 	<properties>
-		<java.version>17</java.version>
+		<java.version>17.0.7</java.version>
 	</properties>
 	<dependencies>
 
