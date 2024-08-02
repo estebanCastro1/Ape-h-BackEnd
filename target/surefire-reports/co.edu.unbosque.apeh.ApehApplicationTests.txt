@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: co.edu.unbosque.apeh.ApehApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 82.989 s - in co.edu.unbosque.apeh.ApehApplicationTests
