@@ -1,4 +1,4 @@
-FROM amazoncorretto:17-alpine-jdk   
+FROM amazoncorretto:17.0.7
 
 COPY  out/artifacts/apeh_jar/apeh.jar app.jar
 
