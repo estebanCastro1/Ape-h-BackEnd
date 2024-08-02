@@ -1,4 +1,4 @@
-/*
+
 package co.edu.unbosque.apeh;
 
 import org.junit.jupiter.api.Test;
@@ -12,4 +12,3 @@ class ApehApplicationTests {
 	}
 
 }
-*/
