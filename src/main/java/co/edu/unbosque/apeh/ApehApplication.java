@@ -1,6 +1,5 @@
 package co.edu.unbosque.apeh;
 
-import co.edu.unbosque.apeh.Config.SecurityConfig;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
