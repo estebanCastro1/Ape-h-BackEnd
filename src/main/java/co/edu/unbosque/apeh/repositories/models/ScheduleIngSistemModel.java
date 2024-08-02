@@ -4,7 +4,7 @@ package co.edu.unbosque.apeh.repositories.models;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "ScheduleIngSistem")
+@Table(name = "horariosIngSistemas")
 public class ScheduleIngSistemModel {
 
     @Id
@@ -22,6 +22,8 @@ public class ScheduleIngSistemModel {
 
     @Column(nullable = false)
     private String aula;
+    @Column(nullable = false)
+    private String jornada;
 
     @ManyToOne()
     @JoinColumn(name = "id_Subjects")
@@ -65,6 +67,14 @@ public class ScheduleIngSistemModel {
 
     public void setAula(String aula) {
         this.aula = aula;
+    }
+
+    public String getJornada() {
+        return jornada;
+    }
+
+    public void setJornada(String jornada) {
+        this.jornada = jornada;
     }
 
     public SubjectsModel getSubjects() {

@@ -31,4 +31,8 @@ public class UserController {
     public UserModel actualizarUser(@RequestBody UserModel user) {
         return this.userService.actualizarUser(user);
     }
+    @DeleteMapping(consumes = "application/json")
+    public String eliminarUser(@RequestBody UserModel user){
+        return this.userService.eliminarUser(user);
+    }
 }

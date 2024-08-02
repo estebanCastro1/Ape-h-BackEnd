@@ -30,4 +30,8 @@ public class SubjectsService {
 
         return subjectsRepository.save(subjects);
     }
+    public String eliminarSubjects(SubjectsModel subjects){
+        subjectsRepository.delete(subjects);
+        return "materia eliminado correctamente";
+    }
 }

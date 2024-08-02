@@ -30,4 +30,8 @@ public class StudentScheduleService {
     public StudentScheduleModel actualizarStudentSchedule(StudentScheduleModel studentSchedule) {
         return studentScheduleRepository.save(studentSchedule);
     }
+    public String eliminarStudentSchedule(StudentScheduleModel studentSchedule){
+        studentScheduleRepository.delete(studentSchedule);
+        return "horario del estudiante eliminado correctamente";
+    }
 }

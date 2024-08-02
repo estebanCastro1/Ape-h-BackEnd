@@ -30,4 +30,8 @@ public class UserService {
 
         return userRepository.save(user);
     }
+    public String eliminarUser(UserModel user){
+        userRepository.delete(user);
+        return "usuario eliminado correctamente";
+    }
 }

@@ -3,7 +3,7 @@ package co.edu.unbosque.apeh.repositories.models;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "prerequisites")
+@Table(name = "prerrequisitos")
 public class PrerequisitesModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

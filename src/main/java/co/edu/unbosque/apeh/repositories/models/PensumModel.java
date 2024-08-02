@@ -7,7 +7,7 @@ import java.util.List;
 
 
 @Entity
-@Table(name = "pensum")
+@Table(name = "planEstudios")
 public class PensumModel {
 
     @Id
@@ -26,9 +26,9 @@ public class PensumModel {
     private UserModel student;
 
     @JoinTable(
-            name = "pensume_Elective",
+            name = "planEstudios_Electiva",
             joinColumns = @JoinColumn(name = "idPensum", nullable = false),
-            inverseJoinColumns = @JoinColumn(name="idElective", nullable = false)
+            inverseJoinColumns = @JoinColumn(name="idElectiva", nullable = false)
     )
     @ManyToMany(cascade = CascadeType.ALL)
     private List<ElectiveModel> electives;
@@ -41,9 +41,9 @@ public class PensumModel {
     }
 
     @JoinTable(
-            name = "pensume_Subjects",
-            joinColumns = @JoinColumn(name = "idPensum", nullable = false),
-            inverseJoinColumns = @JoinColumn(name="idSubjects", nullable = false)
+            name = "planEstudios_Materia",
+            joinColumns = @JoinColumn(name = "idPlanEstudios", nullable = false),
+            inverseJoinColumns = @JoinColumn(name="idMateria", nullable = false)
     )
     @ManyToMany(cascade = CascadeType.ALL)
     private List<SubjectsModel> subjects;

@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(name = "subjects")
+@Table(name = "materias")
 public class SubjectsModel {
 
 
@@ -22,6 +22,8 @@ public class SubjectsModel {
     private String idDocente;
     @Column(nullable = false)
     private String semestre;
+    @Column(nullable = false)
+    private String idprerequisites;
 
     @ManyToOne()
     @JoinColumn(name = "id_professor")
@@ -31,8 +33,8 @@ public class SubjectsModel {
     private List<ScheduleIngSistemModel> ScheduleIngSistem;
 
     @JoinTable(
-            name = "subjects_prerrequisites",
-            joinColumns = @JoinColumn(name = "idSubjects", nullable = false),
+            name = "materias_prerrequisitos",
+            joinColumns = @JoinColumn(name = "idMaterias", nullable = false),
             inverseJoinColumns = @JoinColumn(name="idprerequisites", nullable = false)
     )
     @ManyToMany(cascade = CascadeType.ALL)
@@ -87,6 +89,14 @@ public class SubjectsModel {
 
     public List<ScheduleIngSistemModel> getScheduleIngSistem() {
         return ScheduleIngSistem;
+    }
+
+    public String getIdprerequisites() {
+        return idprerequisites;
+    }
+
+    public void setIdprerequisites(String idprerequisites) {
+        this.idprerequisites = idprerequisites;
     }
 
     public void setScheduleIngSistem(List<ScheduleIngSistemModel> scheduleIngSistem) {

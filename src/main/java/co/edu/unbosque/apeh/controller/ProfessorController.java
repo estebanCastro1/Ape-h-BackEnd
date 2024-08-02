@@ -31,4 +31,8 @@ public class ProfessorController {
     public ProfessorModel actualizarProfessor(@RequestBody ProfessorModel professor) {
         return this.professorService.actualizarProfessor(professor);
     }
+    @DeleteMapping(consumes = "application/json")
+    public String eliminarProfessor(@RequestBody ProfessorModel professor){
+        return this.professorService.eliminarProfessor(professor);
+    }
 }

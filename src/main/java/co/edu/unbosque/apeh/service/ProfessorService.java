@@ -24,9 +24,13 @@ public class ProfessorService {
         //falta verificaciones con las dependencias (laves foraneas)
         professorRepository.save(professor);
         return "profesor creado correctamente";
-
     }
     public ProfessorModel actualizarProfessor(ProfessorModel professor) {
         return professorRepository.save(professor);
+    }
+
+    public String eliminarProfessor(ProfessorModel professor){
+        professorRepository.delete(professor);
+        return "profesor eliminado correctamente";
     }
 }

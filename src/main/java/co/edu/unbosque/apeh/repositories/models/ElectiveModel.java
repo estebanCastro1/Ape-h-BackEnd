@@ -6,7 +6,7 @@ import java.util.List;
 
 
 @Entity
-@Table(name = "electives")
+@Table(name = "electivas")
 public class ElectiveModel {
 
     @Id

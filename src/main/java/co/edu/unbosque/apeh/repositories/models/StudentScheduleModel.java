@@ -1,10 +1,12 @@
 package co.edu.unbosque.apeh.repositories.models;
 
 import jakarta.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 
 @Entity
-@Table(name = "studentSchedule")
+@Table(name = "horarioEstudiantes")
 public class StudentScheduleModel {
 
     @Id
@@ -21,6 +23,36 @@ public class StudentScheduleModel {
 
     @OneToOne(mappedBy = "studentSchedule")
     private UserModel student;
+
+    @JoinTable(
+            name = "horarioEstudiantes_Electiva",
+            joinColumns = @JoinColumn(name = "idHorarioEstudiantes", nullable = false),
+            inverseJoinColumns = @JoinColumn(name="idElectiva", nullable = false)
+    )
+    @ManyToMany(cascade = CascadeType.ALL)
+    private List<ElectiveModel> electives;
+
+    public void addElective(ElectiveModel elective){
+        if(this.electives == null){
+            this.electives = new ArrayList<>();
+        }
+        this.electives.add(elective);
+    }
+
+    @JoinTable(
+            name = "horarioEstudiantes_Materia",
+            joinColumns = @JoinColumn(name = "idHorarioEstudiantes", nullable = false),
+            inverseJoinColumns = @JoinColumn(name="idMateria", nullable = false)
+    )
+    @ManyToMany(cascade = CascadeType.ALL)
+    private List<SubjectsModel> subjects;
+
+    public void addSubjects(SubjectsModel subject){
+        if(this.subjects == null){
+            this.subjects = new ArrayList<>();
+        }
+        this.subjects.add(subject);
+    }
 
     public Long getId() {
         return id;

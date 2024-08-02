@@ -30,4 +30,8 @@ public class StudentScheduleController {
     public StudentScheduleModel actualizarStudentSchedule(@RequestBody StudentScheduleModel studentSchedule) {
         return this.studentScheduleService.actualizarStudentSchedule(studentSchedule);
     }
+    @DeleteMapping(consumes = "application/json")
+    public String eliminarStudentSchedule(@RequestBody StudentScheduleModel studentSchedule){
+        return this.studentScheduleService.eliminarStudentSchedule(studentSchedule);
+    }
 }

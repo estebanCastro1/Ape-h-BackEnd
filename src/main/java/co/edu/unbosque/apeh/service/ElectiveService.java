@@ -30,4 +30,9 @@ public class ElectiveService {
     public ElectiveModel actualizarElective(ElectiveModel elective) {
         return electiveRepository.save(elective);
     }
+
+    public String eliminarElective(ElectiveModel elective){
+        electiveRepository.delete(elective);
+        return "electiva eliminada correctamente";
+    }
 }

@@ -30,4 +30,9 @@ public class PrerequisitesService {
     public PrerequisitesModel actualizarPrerequisites(PrerequisitesModel prerequisites) {
         return prerequisitesRepository.save(prerequisites);
     }
+
+    public String eliminarPrerequisites(PrerequisitesModel prerequisites){
+        prerequisitesRepository.delete(prerequisites);
+        return "prerequisitos eliminados correctamente";
+    }
 }

@@ -29,4 +29,9 @@ public class ElectiveController {
     public ElectiveModel actualizarElective(@RequestBody ElectiveModel elective) {
         return this.electiveService.actualizarElective(elective);
     }
+
+    @DeleteMapping(consumes = "application/json")
+    public String eliminarElective(@RequestBody ElectiveModel elective){
+        return this.electiveService.eliminarElective(elective);
+    }
 }

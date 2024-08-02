@@ -30,4 +30,8 @@ public class PensumController {
     public PensumModel actualizarPensum(@RequestBody PensumModel pensum) {
         return this.pensumService.actualizarPensum(pensum);
     }
+    @DeleteMapping(consumes = "application/json")
+    public String eliminarPensum(@RequestBody PensumModel pensum){
+        return this.pensumService.eliminarPensum(pensum);
+    }
 }

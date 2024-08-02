@@ -30,4 +30,8 @@ public class SubjectsController {
     public SubjectsModel actualizarSubjects(@RequestBody SubjectsModel subjects) {
         return this.subjectsService.actualizarSubjects(subjects);
     }
+    @DeleteMapping(consumes = "application/json")
+    public String eliminarSubjects(@RequestBody SubjectsModel subjects){
+        return this.subjectsService.eliminarSubjects(subjects);
+    }
 }

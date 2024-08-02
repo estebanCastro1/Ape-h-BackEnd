@@ -31,4 +31,8 @@ public class PrerequisitesController {
     public PrerequisitesModel actualizarPrerequisites(@RequestBody PrerequisitesModel prerequisites) {
         return this.prerequisitesService.actualizarPrerequisites(prerequisites);
     }
+    @DeleteMapping(consumes = "application/json")
+    public String eliminarPrerequisites(@RequestBody PrerequisitesModel prerequisites){
+        return this.prerequisitesService.eliminarPrerequisites(prerequisites);
+    }
 }

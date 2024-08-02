@@ -24,10 +24,13 @@ public class PensumService {
         //falta verificaciones con las dependencias (laves foraneas)
         pensumRepository.save(pensum);
         return "pensum creado correctamente";
-
     }
     public PensumModel actualizarPensum(PensumModel pensum) {
         return pensumRepository.save(pensum);
+    }
+    public String eliminarPensum(PensumModel pensum){
+        pensumRepository.delete(pensum);
+        return "pensum eliminado correctamente";
     }
 
 }

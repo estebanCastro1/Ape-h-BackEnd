@@ -3,7 +3,7 @@ package co.edu.unbosque.apeh.repositories.models;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "userType")
+@Table(name = "tipoUsuario")
 public class UserTypeModel {
 
     @Id

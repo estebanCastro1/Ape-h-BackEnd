@@ -30,4 +30,8 @@ public class ScheduleIngSistemController {
     public ScheduleIngSistemModel actualizarScheduleIngSistem(@RequestBody ScheduleIngSistemModel scheduleIngSistem) {
         return this.scheduleIngSistemService.actualizarScheduleIngSistem(scheduleIngSistem);
     }
+    @DeleteMapping(consumes = "application/json")
+    public String eliminarScheduleIngSistem(@RequestBody ScheduleIngSistemModel scheduleIngSistem){
+        return this.scheduleIngSistemService.eliminarScheduleIngSistem(scheduleIngSistem);
+    }
 }
