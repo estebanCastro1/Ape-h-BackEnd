@@ -23,7 +23,7 @@ public class PensumModel {
     private String notaMateria;
 
     @OneToOne(mappedBy = "pensum")
-    private UserModel student;
+    private UserModel user;
 
     @JoinTable(
             name = "planEstudios_Electiva",
@@ -31,13 +31,13 @@ public class PensumModel {
             inverseJoinColumns = @JoinColumn(name="idElectiva", nullable = false)
     )
     @ManyToMany(cascade = CascadeType.ALL)
-    private List<ElectiveModel> electives;
+    private List<ElectiveModel> electivas;
 
     public void addElective(ElectiveModel elective){
-        if(this.electives == null){
-            this.electives = new ArrayList<>();
+        if(this.electivas == null){
+            this.electivas = new ArrayList<>();
         }
-        this.electives.add(elective);
+        this.electivas.add(elective);
     }
 
     @JoinTable(
@@ -87,20 +87,20 @@ public class PensumModel {
         this.notaMateria = notaMateria;
     }
 
-    public UserModel getStudent() {
-        return student;
+    public UserModel getUser() {
+        return user;
     }
 
-    public void setStudent(UserModel student) {
-        this.student = student;
+    public void setUser(UserModel user) {
+        this.user = user;
     }
 
-    public List<ElectiveModel> getElectives() {
-        return electives;
+    public List<ElectiveModel> getElectivas() {
+        return electivas;
     }
 
-    public void setElectives(List<ElectiveModel> electives) {
-        this.electives = electives;
+    public void setElectivas(List<ElectiveModel> electives) {
+        this.electivas = electives;
     }
 
     public List<SubjectsModel> getSubjects() {

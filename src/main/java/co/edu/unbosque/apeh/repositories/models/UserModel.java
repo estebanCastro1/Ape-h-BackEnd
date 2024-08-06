@@ -35,7 +35,6 @@ public class UserModel implements UserDetails {
     @Enumerated(EnumType.STRING)
     Role role;
 
-
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "userType_id", referencedColumnName = "id")
     private UserTypeModel userType;

@@ -7,7 +7,7 @@ import org.springframework.data.repository.query.Param;
 
 public interface ProfessorRepository extends CrudRepository<ProfessorModel, Long> {
 
-    @Query(value = "SELECT * FROM professor WHERE professor.id = :id",
+    @Query(value = "SELECT * FROM profesor WHERE profesor.id = :id",
             nativeQuery = true)
     ProfessorModel professorByID(@Param("id") String id);
 

@@ -17,11 +17,11 @@ public class ProfessorModel {
     @Column(nullable = false)
     private String nombreDocente;
 
-    @OneToMany(mappedBy = "professor", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "profesor", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<SubjectsModel> subjects;
 
     @OneToMany(mappedBy = "professor", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<ElectiveModel> electives;
+    private List<ElectiveModel> electivas;
 
     public Long getId() {
         return id;
@@ -48,10 +48,10 @@ public class ProfessorModel {
     }
 
     public List<ElectiveModel> getElectives() {
-        return electives;
+        return electivas;
     }
 
     public void setElectives(List<ElectiveModel> electives) {
-        this.electives = electives;
+        this.electivas = electives;
     }
 }

@@ -7,7 +7,7 @@ import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
 
 public interface PensumRepository extends CrudRepository<PensumModel, Long> {
-    @Query(value = "SELECT * FROM pensum WHERE pensum.id = :id",
+    @Query(value = "SELECT * FROM plan_estudios WHERE plan_estudios.id = :id",
             nativeQuery = true)
     PensumModel pensumByID(@Param("id") String id);
 }

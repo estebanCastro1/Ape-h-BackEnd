@@ -7,7 +7,7 @@ import org.springframework.data.repository.query.Param;
 
 public interface PrerequisitesRepository extends CrudRepository<PrerequisitesModel, Long> {
 
-    @Query(value = "SELECT * FROM prerequisites WHERE prerequisites.id = :id",
+    @Query(value = "SELECT * FROM prerrequisitos WHERE prerrequisitos.id = :id",
             nativeQuery = true)
     PrerequisitesModel preriquisitesByID(@Param("id") String id);
 }

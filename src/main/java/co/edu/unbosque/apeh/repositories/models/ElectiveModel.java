@@ -17,7 +17,7 @@ public class ElectiveModel {
     @Column(nullable = false)
     private String nombreMateria;
 
-    @ManyToMany(mappedBy = "electives")
+    @ManyToMany(mappedBy = "electivas")
     private List<PensumModel> pensum;
 
     @ManyToOne()

@@ -6,7 +6,7 @@ import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
 
 public interface SubjectsRepository extends CrudRepository<SubjectsModel, Long> {
-    @Query(value = "SELECT * FROM subjects WHERE subjects.id = :id",
+    @Query(value = "SELECT * FROM materias WHERE materias.id = :id",
             nativeQuery = true)
     SubjectsModel subjectsByID(@Param("id") String id);
 }

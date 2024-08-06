@@ -45,8 +45,6 @@ public class AuthService {
 
         userC.guardarUser(user);
 
-
-
         return AuthResponse.builder()
             .token(jwtService.getToken(user))
             .build();

@@ -18,16 +18,15 @@ public class SubjectsModel {
 
     @Column(nullable = false)
     private String nombreMateria;
-    @Column(nullable = false)
-    private String idDocente;
+
     @Column(nullable = false)
     private String semestre;
     @Column(nullable = false)
-    private String idprerequisites;
+    private String idprerequisite;
 
     @ManyToOne()
     @JoinColumn(name = "id_professor")
-    private ProfessorModel professor;
+    private ProfessorModel profesor;
 
     @OneToMany(mappedBy = "subjects", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<ScheduleIngSistemModel> ScheduleIngSistem;
@@ -63,13 +62,6 @@ public class SubjectsModel {
         this.nombreMateria = nombreMateria;
     }
 
-    public String getIdDocente() {
-        return idDocente;
-    }
-
-    public void setIdDocente(String idDocente) {
-        this.idDocente = idDocente;
-    }
 
     public String getSemestre() {
         return semestre;
@@ -79,24 +71,24 @@ public class SubjectsModel {
         this.semestre = semestre;
     }
 
-    public ProfessorModel getProfessor() {
-        return professor;
+    public ProfessorModel getProfesor() {
+        return profesor;
     }
 
-    public void setProfessor(ProfessorModel professor) {
-        this.professor = professor;
+    public void setProfesor(ProfessorModel profesor) {
+        this.profesor = profesor;
     }
 
     public List<ScheduleIngSistemModel> getScheduleIngSistem() {
         return ScheduleIngSistem;
     }
 
-    public String getIdprerequisites() {
-        return idprerequisites;
+    public String getIdprerequisite() {
+        return idprerequisite;
     }
 
-    public void setIdprerequisites(String idprerequisites) {
-        this.idprerequisites = idprerequisites;
+    public void setIdprerequisite(String idprerequisite) {
+        this.idprerequisite = idprerequisite;
     }
 
     public void setScheduleIngSistem(List<ScheduleIngSistemModel> scheduleIngSistem) {

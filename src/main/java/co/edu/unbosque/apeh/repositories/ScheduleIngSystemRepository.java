@@ -6,7 +6,7 @@ import org.springframework.data.repository.query.Param;
 
 public interface ScheduleIngSystemRepository extends CrudRepository<ScheduleIngSistemModel, Long> {
 
-    @Query(value = "SELECT * FROM schedule_ing_sistem WHERE schedule_ing_sistem.id = :id",
+    @Query(value = "SELECT * FROM horarios_ing_sistemas WHERE horarios_ing_sistemas.id = :id",
             nativeQuery = true)
     ScheduleIngSistemModel ScheduleIngSistemByID(@Param("id") String id);
 }

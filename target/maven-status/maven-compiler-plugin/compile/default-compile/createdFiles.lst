@@ -41,7 +41,6 @@ co\edu\unbosque\apeh\controller\ElectiveController.class
 co\edu\unbosque\apeh\controller\SubjectsController.class
 co\edu\unbosque\apeh\Config\SecurityConfig.class
 co\edu\unbosque\apeh\repositories\models\ElectiveModel.class
-co\edu\unbosque\apeh\Auth\DemoController.class
 co\edu\unbosque\apeh\service\PrerequisitesService.class
 co\edu\unbosque\apeh\ServletInitializer.class
 co\edu\unbosque\apeh\Auth\LoginRequest$LoginRequestBuilder.class
