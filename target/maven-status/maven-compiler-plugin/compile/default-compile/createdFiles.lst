@@ -3,6 +3,7 @@ co\edu\unbosque\apeh\Auth\AuthService.class
 co\edu\unbosque\apeh\Jwt\JwtService.class
 co\edu\unbosque\apeh\service\SubjectsService.class
 co\edu\unbosque\apeh\repositories\models\SubjectsModel.class
+co\edu\unbosque\apeh\ExceptionHandler\GlobalExceptionHandler.class
 co\edu\unbosque\apeh\repositories\UserRepository.class
 co\edu\unbosque\apeh\controller\PensumController.class
 co\edu\unbosque\apeh\repositories\PensumRepository.class
